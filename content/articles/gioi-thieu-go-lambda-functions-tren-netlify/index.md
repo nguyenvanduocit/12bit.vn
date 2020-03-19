@@ -41,7 +41,7 @@ Khởi tạo project với cấu trúc sau:
 Đầu tiên chúng ta cần cài đặt package chính thức của AWS hỗ trợ AWS Lambda Functions.
 
 ```sh
-go get https://github.com/aws/aws-lambda-go
+go get github.com/aws/aws-lambda-go
 ```
 
 Code của chúng ta sẽ nằm trong `main.go`
@@ -116,7 +116,7 @@ Chúng ta sẽ dùng Make và định nghĩa các câu lệnh trong `Makefile` �
 build:
    mkdir -p functions
    go get ./...
-   GOOS=linux GOARCH=386 go build -o functions/hello main.go
+   GOOS=linux go build -o functions/hello main.go
 ```
 
 Lệnh build gồm 3 bước:
